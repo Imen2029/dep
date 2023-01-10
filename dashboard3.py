@@ -24,7 +24,7 @@ API_URL='http://0.0.0.0:$PORT'
 infile1=open('LGBMClassifier_f2score_is_unbalance.pkl','rb')
 model=pickle.load(infile1)
 train=pd.read_csv('train_data.csv')
-st.write(train.columns)
+print(train.columns)
 train=train.set_index('SK_ID_CURR')
 
 train_data=train.drop(['TARGET'] ,axis= 1)
