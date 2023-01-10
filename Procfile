@@ -1,1 +1,1 @@
-web: streamlit run --server.enableCORS false --server.port $PORT dashboard3.py api: flask run --host 0.0.0.0 --port $PORT app3.py. 
+web: streamlit run --server.enableCORS false --server.port $PORT dashboard3.py
