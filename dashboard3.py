@@ -18,14 +18,14 @@ from matplotlib import pyplot as plt
 import shap
 import streamlit.components.v1 as components
 
-#API_URL='http://127.0.0.1:5000/'
-API_URL='http://0.0.0.0:$PORT'
+API_URL='http://127.0.0.1:5000/'
+#API_URL='http://0.0.0.0:$PORT'
 #load the model
 infile1=open('LGBMClassifier_f2score_is_unbalance.pkl','rb')
 model=pickle.load(infile1)
 # Reduce size of data
 n_rows=1000
-train=pd.read_csv('train_data.csv',n_rows)
+train=pd.read_csv('train_data.csv',nrows=n_rows)
 print(train.columns)
 train=train.set_index('SK_ID_CURR')
 
